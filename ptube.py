@@ -1,5 +1,10 @@
-from yt_dlp import YoutubeDL
+import re
 import os
+from yt_dlp import YoutubeDL
+
+def sanitize_filename(filename):
+    # Replace invalid characters with underscores
+    return re.sub(r'[<>:"/\\|?*]', '_', filename)
 
 def fetch_and_merge():
     # Get YouTube link from user
@@ -59,8 +64,8 @@ def fetch_and_merge():
         if not os.path.exists(video_path) or not os.path.exists(audio_path):
             raise FileNotFoundError("Video or audio file not found after download.")
 
-        # Create dynamic output filename based on the video's title
-        title = video_info['title']
+        # Sanitize the title for the output file
+        title = sanitize_filename(video_info['title'])
         output_file = f"{title}_output.mp4"
 
         # Merge video and audio using FFmpeg
