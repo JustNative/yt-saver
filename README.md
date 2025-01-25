@@ -21,7 +21,7 @@ Before running this script, ensure the following dependencies are installed on y
    ```bash
    pip install yt-dlp
    ```
-3. **FFmpeg**: Install FFmpeg on your system. For installation instructions, visit the [FFmpeg website](https://ffmpeg.org/).
+3. **FFmpeg**: Install FFmpeg on your system. For installation instructions, visit the [FFmpeg website](https://ffmpeg.org/){:target="_blank"}.
 
 ## Usage
 1. Clone the repository or download the script.
@@ -80,5 +80,5 @@ This project is licensed under the MIT License.
 - [FFmpeg](https://ffmpeg.org/)
 
 ## Support
-If you find this project helpful, consider supporting me at [Buy Me a Coffee](https://buymeacoffee.com/justnative).
+If you find this project helpful, consider supporting me at [Buy Me a Coffee](https://buymeacoffee.com/justnative){:target="_blank"}.
 
